@@ -1,0 +1,105 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Crear un nuevo Empleado</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="formularioTrabajo" class="form" (ngSubmit)="addTrabajo()">
+                <div class="form-group">
+                    <label for="dni">Nombre:</label>
+
+                    <input formControlName="nombre" name="nombre" type="text" class="form-control" required>
+                    <div class="alert" *ngIf="formularioTrabajo.get('nombre')?.invalid">
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('nombre')?.hasError('required') &&formularioTrabajo.get('nombre')?.touched">
+                            Este campo es obligatorio
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('nombre')?.hasError('minlength') &&formularioTrabajo.get('nombre')?.touched">
+                            Este campo debe tener al menos 5 caracteres
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('nombre')?.hasError('maxlength') &&formularioTrabajo.get('nombre')?.touched">
+                            Este campo debe tener menos de 50 caracteres
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="dni">Descripcion:</label>
+
+                    <input formControlName="descripcion" name="descripcion" type="text" class="form-control" required>
+                    <div class="alert" *ngIf="formularioTrabajo.get('descripcion')?.invalid">
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descripcion')?.hasError('required') &&formularioTrabajo.get('descripcion')?.touched">
+                            Este campo es obligatorio
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descripcion')?.hasError('minlength') &&formularioTrabajo.get('descripcion')?.touched">
+                            Este campo debe tener al menos 5 caracteres
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descripcion')?.hasError('maxlength') &&formularioTrabajo.get('descripcion')?.touched">
+                            Este campo debe tener menos de 50 caracteres
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="dni">Precio: </label>
+
+                    <input formControlName="precio" name="precio" type="number" class="form-control" required>
+                    <div class="alert" *ngIf="formularioTrabajo.get('precio')?.invalid">
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('precio')?.hasError('required') &&formularioTrabajo.get('precio')?.touched">
+                            Este campo es obligatorio
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('precio')?.hasError('minlength') &&formularioTrabajo.get('precio')?.touched">
+                            Este campo debe tener al menos 5 caracteres
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('precio')?.hasError('maxlength') &&formularioTrabajo.get('precio')?.touched">
+                            Este campo debe tener menos de 50 caracteres
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="dni">Descuento:</label>
+
+                    <input formControlName="descuento" name="descuento" type="number" class="form-control" required>
+                    <div class="alert" *ngIf="formularioTrabajo.get('descuento')?.invalid">
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descuento')?.hasError('required') &&formularioTrabajo.get('descuento')?.touched">
+                            Este campo es obligatorio
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descuento')?.hasError('minlength') &&formularioTrabajo.get('descuento')?.touched">
+                            Este campo debe tener al menos 5 caracteres
+                        </div>
+                        <div class="alert-danger alert-custom"
+                            *ngIf="formularioTrabajo.get('descuento')?.hasError('maxlength') &&formularioTrabajo.get('descuento')?.touched">
+                            Este campo debe tener menos de 50 caracteres
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button class="btn btn-danger" type="submit">crea Trabajo</button>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,80 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Empleado</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">DNI:</label>
+                    <input [(ngModel)]="empleado.dni" name="dni" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre:</label>
+                    <input  [(ngModel)]="empleado.nombre " name="nombre" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Apellido 1:</label>
+                    <input [(ngModel)]="empleado.apellido1" name="apellido1" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Apellido 2:</label>
+                    <input [(ngModel)]="empleado.apellido2" name="apellido2" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">username:</label>
+                    <input [(ngModel)]="empleado.login" name="login" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">password:</label>
+                    <input [(ngModel)]="empleado.password" name="password" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono:</label>
+                    <input [(ngModel)]="empleado.telefono" name="telefono" type="number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input [(ngModel)]="empleado.email" name="email" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">token:</label>
+                    <input [(ngModel)]="empleado.token" name="token" type="text" class="form-control">
+                </div>
+                <div class="form-group row">
+                    <label for="inputValidado" class="col-sm-2 col-form-label">Validado: </label>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="inputValidado" id="inputValidado"
+                            value="true" [(ngModel)]="empleado.validado" checked>
+                        <label class="form-check-label" for="inputValidado">
+                            si
+                        </label>
+                        <input class="form-check-input" type="radio" name="inputValidado" id="inputInValidado"
+                            value="false" [(ngModel)]="empleado.validado" >
+                        <label class="form-check-label" for="inputValidado">
+                            no
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputActivo" class="col-sm-2 col-form-label">Activo: </label>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="inputActivo" id="inputActivo"
+                            value="true" [(ngModel)]="empleado.activo" checked>
+                        <label class="form-check-label" for="inputActivo">
+                            si
+                        </label>
+                        <input class="form-check-input" type="radio" name="inputActivo" id="inputInActivo"
+                            value="false" [(ngModel)]="empleado.activo">
+                        <label class="form-check-label" for="inputActivo">
+                            no
+                        </label>
+                    </div>
+                </div>
+                <button (click)="updateEmpleado()" class="btn btn-danger">Actualizar Empleado</button>
+                <button (click)="deleteEmpleado()" class="btn btn-danger">Borrar Empleado</button>
+            </form>
+        </div>
+    </div>
+
+</div>

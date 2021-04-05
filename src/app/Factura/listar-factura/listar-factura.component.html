@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="card">
+        <mat-paginator class="mb-3" [length]="facturas.length" [pageSize]="page_size"
+            [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event)" showFirstLastButtons>
+        </mat-paginator>
+        <div class="card-header">
+            <div class="card-body">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Fecha</th>
+                            
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let factura of facturas | paginator:page_size:page_number" class="text-center" (click)="viewFactura(factura)" >
+
+                            <td >{{factura.id}}</td>
+                            <td>{{factura.fecha}}</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

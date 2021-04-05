@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+        <h3>Crear un nueva Cita</h3>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formularioCita" class="form" (ngSubmit)="crearCita()">
+            <div class="form-group">
+                <label for="fecha">fecha:</label>
+
+                <input formControlName="fecha" name="fecha" type="text" class="form-control" required>
+
+
+            </div>
+
+            <label for="">Cliente:</label>
+            <input name="id_cliente" type="number" class="form-control" formControlName="id_cliente" required>
+
+
+            <label for="">Empleado:</label>
+            <input name="id_empleado" type="number" class="form-control" formControlName="id_empleado" required>
+
+
+            <label for="">local:</label>
+            <input name="id_local" type="number" class="form-control" formControlName="id_local" required>
+            <label for="">tareas:</label>
+            <input name="id_hacer" type="number" class="form-control" formControlName="id_hacer" required>
+
+
+            <label for="">terminado:</label>
+            <input name="terminado" type="number" class="form-control" formControlName="terminado" required>
+
+
+            <label for="">factura:</label>
+            <input name="id_factura" type="number" class="form-control" formControlName="id_factura" required>
+
+
+
+            <button class="btn btn-danger" type="submit">crea Cita</button>
+        </form>
+    </div>
+</div>

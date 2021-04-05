@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <p>Cita numero {{cita.id}}</p>
+            <div class="card-body">
+                
+                <p>El Cliente : {{cita.cliente.nombre}}</p>
+                <p>tiene cita con Empleado :  {{cita.empleado.nombre}}</p>
+                <p>El día {{cita.fecha}}</p>
+                <p>Tareas a hacer :</p><p *ngFor="let tarea of cita.tareas">{{tarea.trabajo.nombre}}</p>
+                
+            </div>
+            <button class="btn btn-outline-primary" (click)="imprimirCita()"> Imprimir factura</button>
+        </div>  
+      </div>
+
+</div>

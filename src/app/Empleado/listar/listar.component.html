@@ -1,0 +1,29 @@
+
+<div class="container">
+    
+    <div class="card">
+      <div class="card-header">
+          <div class="card-body">
+              <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th class="text-center">Nombre</th>
+                          <th class="text-center">Apellidos</th>
+                          <th class="text-center">Telefonos</th>
+                          
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let empleado of empleados" class="text-center">
+                        <td (click)="editarEmpleado(empleado)" >{{empleado.nombre}}</td>
+                        <td>{{empleado.apellido1}} {{empleado.apellido2}}</td>
+                        <td>{{empleado.telefono}}</td>
+                        
+                      </tr>
+                  </tbody>
+              </table>
+              <button (click)="nuevoEmpleado()" class="btn btn-outline-primary">Nueva Empleado</button>
+          </div>
+      </div>  
+    </div>
+</div>

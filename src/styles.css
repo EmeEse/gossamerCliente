@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body{background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/pattern_(3).svg");}
+
+.card{
+    margin-top: 5%;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+
+.btn{
+    margin-top: 3%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
