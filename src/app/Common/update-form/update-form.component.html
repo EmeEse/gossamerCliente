@@ -1,3 +1,4 @@
+<div class="col col-sm-8"></div>
 <div class="card">
     <div class="card-header">
         <h3>Crear un nueva Cita</h3>
@@ -15,10 +16,14 @@
             <label for="">Cliente:</label>
             <input name="id_cliente" type="number" class="form-control" formControlName="id_cliente" required>
 
-
-            <label for="">Empleado:</label>
-            <input name="id_empleado" type="number" class="form-control" formControlName="id_empleado" required>
-
+            <div class="form-group">
+                <label for="empleado">Empleado:</label>
+                <select  class="form-control" id="exampleFormControlSelect1" name="id_empleado" class="form-control" formControlName="id_empleado" required>
+                  <option  *ngFor="let empleado of empleados">{{empleado.nombre}}</option>
+                  
+                </select>
+              </div>
+           
 
             <label for="">local:</label>
             <input name="id_local" type="number" class="form-control" formControlName="id_local" required>
